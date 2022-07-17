@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pong Front End</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles/index.css" />
+        <script src="js/index2.js"></script>
+    </head>
+    <body>
+        <!-- Home Page -->
+        <div id="homePage">
+            <div id="homeTitle" class="homeTitle">
+                <h1>Pong Front End</h1>
+            </div>
+            <div id="homeDesc" class="homeDesc">
+                <h2>Click Start to Play Pong</h2>
+            </div>
+            <button id="startButton" class="startButton">Start</button>
+            <!-- Add in something that keeps track of their current record here-->
+        </div>
+        <!-- Play Pong -->
+        <div id="pongGame" tabindex="-1">
+            <div class="pongDesc">
+                <h1>Pong Game</h1>
+                <h2>Click <span id = "directionsButton">HERE</span> for directions</h2>
+            </div>
+            <div class="pongArea" id="pongArea">
+                <h2
+                    style="margin-top: 350px; transform: translateY(-50%)"
+                    id="removeGameStart"
+                >
+                    Press
+                    <span id="startGameButton" class="startGameButton"
+                        >HERE</span
+                    >
+                    To Start
+                </h2>
+                <div id="actualGame">
+                    <div class="pongPaddle" id="userPaddle"></div>
+                    <div class="pongPaddle2" id="computerPaddle"></div>
+                    <div class="pongBall" id="pongBall"></div>
+                </div>
+            </div>
+            <div id="scores" style="padding-top: 2%;">
+                <div id = 'userScoreDisp'>
+
+                </div>
+                <div id = 'compScoreDisp'>
+
+                </div>
+            </div>
+            <button id="endButton" class="startButton">End Game</button>
+        </div>
+        <audio controls src="pongNoise.wav" id="pongAudio" type="audio/wav" style="display:none;"></audio>
+        <audio controls src="win.wav" id="scoreAudio" type="audio/wav" style="display:none;"></audio>
+        <script>
+            // before React is loaded
+            if (typeof window.__REACT_DEVTOOLS_GLOBAL_HOOK__ === 'object') {
+                __REACT_DEVTOOLS_GLOBAL_HOOK__.inject = function() {};
+            }
+        </script>
+    </body>
+</html>

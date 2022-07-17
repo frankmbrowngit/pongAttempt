@@ -1,0 +1,128 @@
+:root {
+    --greenColor: #35C138;
+}
+* {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+.homeTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+.homeTitle > h1 {
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 32px;
+    font-weight: 200;
+    margin:auto;
+}
+.homeTitle > h1:hover {
+    color: var(--greenColor);
+}
+.homeDesc {
+    display: flex;
+    flex-direction: row;
+}
+.homeDesc > h2 {
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+    font-weight: 100;
+    margin: auto;
+}
+.homeDesc > h2:hover {
+    color: var(--greenColor);
+}
+.startButton {
+    border: 1px solid white;
+    color: white;
+    background-color: inherit;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+    font-weight: 200;
+    display: block;
+    margin: 5% auto;
+    padding: 1%;
+    border-radius: 4px;
+    box-shadow: 0 5px #fff;
+    cursor: pointer;
+}
+.startButton:hover {
+    color: #35C138;
+    cursor: pointer;
+}
+.startButton:active {
+    background-color: #35C138;
+    color: white;
+    box-shadow: 0 2.5px #888;
+    transform: translateY(2.5px);
+    cursor: pointer;
+}
+#pongGame {
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+}
+#pongGame:focus-visible {
+    outline: none;
+}
+.pongDesc > h1 {
+    font-weight: 100;
+    margin-top: 2%;
+    text-align: center;
+}
+.pongDesc > h2 {
+    font-weight: 100;
+    margin-top: 1%;
+    text-align: center;
+}
+.pongDesc > h2 > span:hover {
+    color: var(--greenColor);
+    cursor: pointer;
+}
+
+#pongGame > .pongArea {
+    position: relative;
+    width: 1500px;
+    height: 700px;
+    margin: auto;
+    margin-top: 3%;
+    border: 1px solid white;
+    text-align: center;
+}
+.startGameButton:hover {
+    color: var(--greenColor);
+    cursor: pointer;
+}
+
+.pongPaddle {
+    height: 75px;
+    width:10px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.pongPaddle2 {
+    height: 75px;
+    width:10px;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.pongBall {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    background-color: white;
+    right: 50%;
+    top: 50%;
+    transform: translate(50%,-50%);
+    border-radius: 100%;
+}
